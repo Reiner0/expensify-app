@@ -31,8 +31,10 @@
 
 // Array Destructuring
 
-const address = ['2556 E Taro Ln', 'Phoenix', 'Arizona', '85050'];
+// const address = ['2556 E Taro Ln', 'Phoenix', 'Arizona', '85050'];
+// const [ street, city, state, zip ] = address;
+// console.log(`${street}\n${city}, ${state} ${zip}`)
 
-const [ street, city, state, zip ] = address;
-
-console.log(`${street}\n${city}, ${state} ${zip}`)
+const item = ['Coffee (hot)', '$2.00', '$2.50', '$2.75'];
+const [ itemName, , mediumPrice ] = item;
+console.log(`A medium ${itemName} costs ${mediumPrice}.`);
