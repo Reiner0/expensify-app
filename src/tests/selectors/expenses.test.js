@@ -1,13 +1,7 @@
 import selectExpenses from '../../selectors/expenses';
 import moment from 'moment';
 import expenses from '../fixtures/expenses';
-
-const filtersDefault = {
-  text: '',
-  sortBy: 'date',
-  startDate: undefined,
-  endDate: undefined
-};
+import filtersDefault from '../fixtures/filtersDefault';
 
 test('should filter by text value', () => {
   const filters = {
