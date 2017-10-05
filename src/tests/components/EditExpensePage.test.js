@@ -8,7 +8,14 @@ beforeEach(() => {
   history = { push: jest.fn() };
   editExpense = jest.fn();
   removeExpense = jest.fn();
-  wrapper = shallow(<EditExpensePage expense={expenses[1]} editExpense={editExpense} removeExpense={removeExpense} history={history} />);
+  wrapper = shallow(
+    <EditExpensePage
+      editExpense={editExpense}
+      removeExpense={removeExpense}
+      history={history}
+      expense={expenses[1]}
+    />
+  );
 });
 
 test('should render EditExpensePage correctly', () => {
@@ -24,5 +31,7 @@ test('should handle editExpense', () => {
 test('should handle removeExpense', () => {
   wrapper.find('button').simulate('click');
   expect(history.push).toHaveBeenLastCalledWith('/');
-  expect(removeExpense).toHaveBeenLastCalledWith({ id: expenses[1].id });
+  expect(removeExpense).toHaveBeenLastCalledWith({
+    id: expenses[1].id
+  });
 });
