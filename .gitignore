@@ -3,6 +3,9 @@
 yarn.lock
 package-lock.json
 
+/public/bundle.js*
+/public/styles.css*
+
 # Logs
 logs
 *.log
