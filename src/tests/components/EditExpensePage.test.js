@@ -4,6 +4,7 @@ import expenses from '../fixtures/expenses';
 import { EditExpensePage } from '../../components/EditExpensePage';
 
 let history, editExpense, startRemoveExpense, wrapper;
+
 beforeEach(() => {
   history = { push: jest.fn() };
   editExpense = jest.fn();
